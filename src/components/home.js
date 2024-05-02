@@ -1,42 +1,162 @@
 import React from "react";
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
+import Link from '@mui/material/Link';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardActionArea from '@mui/material/CardActionArea';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
 
 function Home(){
     return(
-    <div >
-        <h1 class="headings">Welcome to Talent for Startups</h1>
-        <p>This is a one-stop destination for startups to acquire essential digital skills and business management knowledge. Whether you're just launching your venture or seeking to scale it up, we have the resources you need to succeed in today's competitive landscape.</p>
-        
-        <p id="kickstart">Kickstart your journey with us!</p>
-        
-        <h2 class="headings">Courses for Every Stage</h2>
-        <p>Our platform offers a diverse range of courses tailored to suit startups at various stages of their journey. From foundational courses covering digital marketing, website development, and social media management to advanced modules on financial planning, leadership, and growth hacking, we have something for everyone</p>
-        
-        <h2 class="headings">Expert Instructors</h2>
-        <p> Learn from industry experts and seasoned entrepreneurs who have successfully navigated the challenges of building and growing startups. Our instructors bring real-world experience and practical insights to the table, ensuring that you receive high-quality education that is directly applicable to your business.</p>
-        <img src="images/marvin-meyer-SYTO3xs06fU-unsplash.jpg" alt="Aerial view of a workstation with laptops" width="1000" height="600"/>
-        
-        {/* <!--Place 2 courses here--> */}
-        <h3  class="headings">Digital Marketing Essentials: Mastering the Online Landscape</h3>
-        <p>A comprehensive course designed to equip learners with the fundamental skills needed to excel in the digital marketing realm. Covering topics such as search engine optimization (SEO), social media marketing, email marketing, and content strategy, this course offers a holistic understanding of key digital marketing channels. Through a blend of theoretical concepts and practical exercises, participants will learn how to develop targeted marketing campaigns, optimize their online presence, and engage with their target audience effectively. With expert-led instruction and real-world case studies, learners will gain actionable insights into leveraging digital tools and platforms to drive business growth and achieve marketing objectives. Whether you're a novice looking to break into the field or a seasoned marketer seeking to enhance your digital skill set, this course provides valuable knowledge and strategies to succeed in today's digital landscape.</p>
-        
-        <h3 class="headings">Mastering Software Development: From Basics to Best Practices</h3>
-        <p>A comprehensive course designed for aspiring software engineers. Covering fundamental concepts such as programming languages, data structures, and algorithms, the course provides a solid foundation for building robust and scalable applications. Through hands-on projects and coding exercises, students gain practical experience in software design, implementation, and testing. In addition, the course explores advanced topics such as version control, debugging techniques, and software architecture principles, empowering learners to develop high-quality, maintainable code. By the end of the course, participants will have the skills and knowledge needed to embark on a successful career in software development.</p>
-        <img src="images/myhq-workspaces-VCoh27vHEh0-unsplash.jpg" alt ="modern office space" width="1000" height="600"/>
-        
-        {/* <!--Place 2 courses here--> */}
-        <h3 class="headings">Unlocking Insights: Data Analytics Essentials</h3>
-        <p>A comprehensive course designed to equip learners with the foundational skills needed to extract actionable insights from data. Through a combination of theoretical concepts and hands-on practical exercises, participants will learn how to collect, clean, analyze, and visualize data using industry-standard tools and techniques. By the end of the course, students will be proficient in leveraging data to make informed decisions, driving business growth and innovation.</p>
-        
-        <h3 class="headings">Mastering Customer Support Excellence</h3>
-        <p>A comprehensive course designed to equip participants with the skills and strategies needed to deliver exceptional customer service. Through engaging lectures, case studies, and interactive simulations, learners will learn how to effectively communicate with customers, resolve issues efficiently, and build long-lasting relationships. By the end of the course, participants will be equipped with the tools and techniques to elevate their company's customer support experience to new heights.</p>
-        <img src="images/shridhar-gupta-dZxQn4VEv2M-unsplash.jpg" alt="open office concept" width="1000" height="600"/>
-        
-        {/* <!--Place 1 course here--> */}
-        <h3 class="headings">Cloud Computing Essentials</h3>
-        <p> A comprehensive course designed to equip learners with the fundamental knowledge and skills needed to leverage cloud technology effectively. Through a series of engaging lectures and hands-on exercises, participants will explore key concepts such as cloud infrastructure, deployment models, and service models. By the end of the course, students will be proficient in navigating cloud platforms, optimizing resources, and implementing cloud-based solutions to drive innovation and efficiency in their organizations.</p>
-        <p fontSize='10px'>This content is AI generated using ChatGPT</p>
-
-    </div>)
+ 
+    <Box>
+    <Paper
+      sx={{
+        position: 'relative',
+        backgroundColor: '#827DB9',
+        color: '#fff',
+        mb: 4,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        backgroundImage: 'images/marvin-meyer-SYTO3xs06fU-unsplash.jpg',
+      }}
+    >
+      <Box
+        sx={{
+          position: 'absolute',
+          top: 0,
+          bottom: 0,
+          right: 0,
+          left: 0,
+          backgroundColor: 'rgba(0,0,0,.3)',
+        }}
+      />
+      <Grid container>
+        <Grid item md={6}>
+          <Box
+            sx={{
+              position: 'relative',
+              p: { xs: 3, md: 6 },
+              pr: { md: 0 },
+            }}
+          >
+            <Typography component="h1" variant="h3" color="inherit" gutterBottom>
+            Welcome to Talent for Startups
+            </Typography>
+            <Typography variant="h5" color="inherit" paragraph>
+            This is a one-stop destination for startups to acquire essential digital skills and business management knowledge. Whether you're just launching your venture or seeking to scale it up, we have the resources you need to succeed in today's competitive landscape.
+            </Typography>
+            <Link variant="subtitle1" href="#">
+            Kickstart your journey with us!
+            </Link>
+          </Box>
+        </Grid>
+      </Grid>
+    </Paper>
+    {/* FIRST GRID */}
+    <Grid container spacing={4}>
+        <Grid item xs={12} md={6}>
+            <CardActionArea component="a" href="#">
+                <Card sx={{ display: 'flex' }}>
+                <CardContent sx={{ flex: 1 }}>
+                    <Typography component="h2" variant="h5">
+                    Courses for Every Stage
+                    </Typography>
+                    <Typography variant="subtitle1" paragraph>
+                    Our platform offers a diverse range of courses tailored to suit startups at various stages of their journey. From foundational courses covering digital marketing, website development, and social media management to advanced modules on financial planning, leadership, and growth hacking, we have something for everyone
+                    </Typography>
+                    <Typography variant="subtitle1" color="primary">
+                    Continue reading...
+                    </Typography>
+                </CardContent>
+                <CardMedia
+                    component="img"
+                    sx={{ width: 160, display: { xs: 'none', sm: 'block' } }}
+                    image='images/marvin-meyer-SYTO3xs06fU-unsplash.jpg'
+                    alt="aother people"
+                />
+                </Card>
+            </CardActionArea>
+        </Grid>
+        <Grid item xs={12} md={6}>
+            <CardActionArea component="a" href="#">
+                <Card sx={{ display: 'flex' }}>
+                <CardContent sx={{ flex: 1 }}>
+                    <Typography component="h2" variant="h5">
+                    Expert Instructors
+                    </Typography>
+                    <Typography variant="subtitle1" paragraph>
+                    Learn from industry experts and seasoned entrepreneurs who have successfully navigated the challenges of building and growing startups. Our instructors bring real-world experience and practical insights to the table, ensuring that you receive high-quality education that is directly applicable to your business.
+                    </Typography>
+                    <Typography variant="subtitle1" color="primary">
+                    Continue reading...
+                    </Typography>
+                </CardContent>
+                <CardMedia
+                    component="img"
+                    sx={{ width: 160, display: { xs: 'none', sm: 'block' } }}
+                    image='images/marvin-meyer-SYTO3xs06fU-unsplash.jpg'
+                    alt="aother people"
+                />
+                </Card>
+            </CardActionArea>
+        </Grid>
+    </Grid>
+    {/* SECOND GRID */}
+    <Grid container spacing={4}>
+        <Grid item xs={12} md={6}>
+            <CardActionArea component="a" href="#">
+                <Card sx={{ display: 'flex' }}>
+                <CardContent sx={{ flex: 1 }}>
+                    <Typography component="h2" variant="h5">
+                    Digital Marketing Essentials: Mastering the Online Landscape
+                    </Typography>
+                    <Typography variant="subtitle1" paragraph>
+                    A comprehensive course designed to equip learners with the fundamental skills needed to excel in the digital marketing realm. Covering topics such as search engine optimization (SEO), social media marketing, email marketing, and content strategy, this course offers a holistic understanding of key digital marketing channels. 
+                    </Typography>
+                    <Typography variant="subtitle1" color="primary">
+                    Continue reading...
+                    </Typography>
+                </CardContent>
+                <CardMedia
+                    component="img"
+                    sx={{ width: 160, display: { xs: 'none', sm: 'block' } }}
+                    image='images/shridhar-gupta-dZxQn4VEv2M-unsplash.jpg'
+                    alt="aother people"
+                />
+                </Card>
+            </CardActionArea>
+        </Grid>
+        <Grid item xs={12} md={6}>
+            <CardActionArea component="a" href="#">
+                <Card sx={{ display: 'flex' }}>
+                <CardContent sx={{ flex: 1 }}>
+                    <Typography component="h2" variant="h5">
+                    Mastering Software Development: From Basics to Best Practices
+                    </Typography>
+                    <Typography variant="subtitle1" paragraph>
+                    A comprehensive course designed for aspiring software engineers. Covering fundamental concepts such as programming languages, data structures, and algorithms, the course provides a solid foundation for building robust and scalable applications. 
+                    </Typography>
+                    <Typography variant="subtitle1" color="primary">
+                    Continue reading...
+                    </Typography>
+                </CardContent>
+                <CardMedia
+                    component="img"
+                    sx={{ width: 160, display: { xs: 'none', sm: 'block' } }}
+                    image='images/myhq-workspaces-VCoh27vHEh0-unsplash.jpg'
+                    alt="aother people"
+                />
+                </Card>
+            </CardActionArea>
+        </Grid>
+    </Grid>
+    </Box>
+)
 }
 
 export default Home;
