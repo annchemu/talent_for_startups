@@ -66,6 +66,16 @@ function Navbar(){
                         >
                             Contact Us
                         </Link>
+                        <Link
+                            color="inherit"
+                            noWrap
+                            variant="body2"
+                            href='/courses'
+                            sx={{ p: 1, flexShrink: 0 }}
+                        >
+                            Courses
+                        </Link>
+                        
                     </Toolbar>
                 </React.Fragment>
             </div>

@@ -4,6 +4,7 @@ import Home from "./components/home";
 import About from "./components/about.js";
 import Contact from "./components/contact.js";
 import Signup from "./components/signup.js";
+import Courses from "./components/courses_test.js";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
                 <Route path="/about" element={<About />}></Route>
                 <Route path="/contact" element={<Contact />}></Route>
                 <Route path="/signup" element={<Signup />}></Route>
+                <Route path="/courses" element={<Courses />}></Route>
             </Routes>
         </div>
     </Router>
